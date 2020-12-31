@@ -50,9 +50,9 @@ var _hmt = _hmt || [];
 <meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/safe_area.JPG">
 <meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/priority_1.JPG">
 <meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/priority_2.JPG">
-<meta property="og:image" content="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/Art/Nested_Stack_Views_Screenshot_2x.JPG">
+<meta property="og:image" content="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/Art/Nested_Stack_Views_Screenshot_2x.png">
 <meta property="article:published_time" content="2020-12-27T00:27:31.000Z">
-<meta property="article:modified_time" content="2020-12-31T14:44:49.936Z">
+<meta property="article:modified_time" content="2020-12-31T14:55:15.548Z">
 <meta property="article:author" content="kunkunboy">
 <meta property="article:tag" content="auto layout">
 <meta name="twitter:card" content="summary">
@@ -210,7 +210,7 @@ redView.height = 50.0</code></pre>
     }
 }</code></pre>
 <h4 id="拒绝拉伸和压缩"><a href="#拒绝拉伸和压缩" class="headerlink" title="拒绝拉伸和压缩"></a>拒绝拉伸和压缩</h4><p>比如这个截图，有图片和文本，它们的size都是根据内容来自适应的，所以不需要人为设置宽度约束。但是问题在于，当屏幕变宽时，谁可以优先被拉伸？当屏幕变窄时，谁又可以优先被压缩呢？<br><img src="/archives/98e4e333/priority_1.JPG" alt="priority 1"><br>解决这个问题，需要引进两个概念：拒绝拉伸优先级<code>Content-Hugging priority</code>和拒绝压缩优先级<code>Compression-Resistance priority</code>，这样就好理解了。再看上面的例子，将图片的两个拒绝值都提高1个单位，当屏幕变宽时，由于图片相对于文本更加拒绝被拉伸，所以文本宽度就被拉伸开了；当屏幕变窄时，由于图片相对于文本更加拒绝被压缩，所以文本的宽度就被挤压而导致换行。<br><img src="/archives/98e4e333/priority_2.JPG" alt="priority 2"></p>
-<h2 id="UIKit组合技"><a href="#UIKit组合技" class="headerlink" title="UIKit组合技"></a>UIKit组合技</h2><h4 id="UIStackView"><a href="#UIStackView" class="headerlink" title="UIStackView"></a>UIStackView</h4><p>苹果推出的<code>UIStackView</code>非常方便的满足了弹性布局(Flexbox)的需求，使用stack的方式布局，既减少了约束维护成本，而且它的强大之处在于通过嵌套布局完成复杂的UI，比如下面这个截图，只用UIStackView来布局完全足够了：<br><img src="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/Art/Nested_Stack_Views_Screenshot_2x.JPG" alt="UIStackView"></p>
+<h2 id="UIKit组合技"><a href="#UIKit组合技" class="headerlink" title="UIKit组合技"></a>UIKit组合技</h2><h4 id="UIStackView"><a href="#UIStackView" class="headerlink" title="UIStackView"></a>UIStackView</h4><p>苹果推出的<code>UIStackView</code>非常方便的满足了弹性布局(Flexbox)的需求，使用stack的方式布局，既减少了约束维护成本，而且它的强大之处在于通过嵌套布局完成复杂的UI，比如下面这个截图，只用UIStackView来布局完全足够了：<br><img src="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/Art/Nested_Stack_Views_Screenshot_2x.png" alt="UIStackView"></p>
 <p>对于UIStackView，我总结了几个基本点：</p>
 <ul>
 <li>首先需要指明<code>axis</code>，即stack方向是水平布局还是垂直布局</li>
@@ -302,7 +302,7 @@ redView.height = 50.0</code></pre>
 <div>
     
     <footer class="article-footer">
-      <a data-url="https://www.kunkunboy.com/archives/98e4e333.html" data-id="ckjcyorah0005ite09y7b5kzu" class="article-share-link">Share</a>
+      <a data-url="https://www.kunkunboy.com/archives/98e4e333.html" data-id="ckjcz0pmg0005w2e0aom5gute" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/auto-layout/" rel="tag">auto layout</a></li></ul>
