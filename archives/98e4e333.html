@@ -41,22 +41,22 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="kunkunboy">
 <meta property="og:description" content="今年12月看完了一本关于iOS自动布局的作品，叫Modern Auto Layout，作者是Keith Harrison，知名博客Use Your Loaf的作者，一位元老级程序员。这本书里介绍了iOS自动布局的概念、发展、技术细节、API更新和使用场景，即使懂iOS但是自动布局方面零基础的开发者，只要坚持看完并且完成每章的课后练习，也能做到布局菜鸟变大师。这篇博客就简单做个总结性的笔记，提炼一些">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/98e4e333/springs_and_struts.PNG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/98e4e333/constraint_equation.PNG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/98e4e333/sibling_views_1.PNG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/98e4e333/sibling_views_2.PNG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/98e4e333/constraint_owner_1.PNG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/98e4e333/constraint_owner_2.PNG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/98e4e333/safe_area.PNG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/98e4e333/priority_1.PNG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/98e4e333/priority_2.PNG">
-<meta property="og:image" content="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/Art/Nested_Stack_Views_Screenshot_2x.png">
+<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/springs_and_struts.JPG">
+<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/constraint_equation.JPG">
+<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/sibling_views_1.JPG">
+<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/sibling_views_2.JPG">
+<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/constraint_owner_1.JPG">
+<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/constraint_owner_2.JPG">
+<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/safe_area.JPG">
+<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/priority_1.JPG">
+<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/priority_2.JPG">
+<meta property="og:image" content="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/Art/Nested_Stack_Views_Screenshot_2x.JPG">
 <meta property="article:published_time" content="2020-12-27T00:27:31.000Z">
-<meta property="article:modified_time" content="2020-12-27T14:11:13.786Z">
+<meta property="article:modified_time" content="2020-12-31T14:44:49.936Z">
 <meta property="article:author" content="kunkunboy">
 <meta property="article:tag" content="auto layout">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.kunkunboy.com/archives/98e4e333/98e4e333/springs_and_struts.PNG">
+<meta name="twitter:image" content="https://www.kunkunboy.com/archives/98e4e333/springs_and_struts.JPG">
   
     <link rel="alternate" href="/atom.xml" title="kunkunboy" type="application/atom+xml">
   
@@ -147,11 +147,11 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今年12月看完了一本关于iOS自动布局的作品，叫<code>Modern Auto Layout</code>，作者是<code>Keith Harrison</code>，知名博客<a target="_blank" rel="noopener external nofollow noreferrer" href="https://useyourloaf.com/">Use Your Loaf</a>的作者，一位元老级程序员。这本书里介绍了iOS自动布局的概念、发展、技术细节、API更新和使用场景，即使懂iOS但是自动布局方面零基础的开发者，只要坚持看完并且完成每章的课后练习，也能做到布局菜鸟变大师。这篇博客就简单做个总结性的笔记，提炼一些重点和自我理解。</p>
-<h2 id="弹簧与支柱"><a href="#弹簧与支柱" class="headerlink" title="弹簧与支柱"></a>弹簧与支柱</h2><p>在自动布局出现以前，我们都是通过设置view.frame来做到布局的，但是随着iPhone和iPad的迭代升级，出现不同大大小小的屏幕，导致手动布局的代码变得难以维护。为了做到视图自适应的效果，苹果最开始给出了弹簧与支柱<code>(springs and struts)</code>的解决方案，你可以在Interface Builder里看到这样的截图：<br><img src="/archives/98e4e333/98e4e333/springs_and_struts.PNG" alt="strings and struts"><br>它的意思就是：通过设置视图外在的上下左右四个<code>支柱</code>来固定与父视图的间距，以及设置内部的宽高<code>弹簧</code>来决定是否自适应宽高。这样的话，视图就会跟随父视图frame的变化而变化。换成代码的话，就叫做<code>Autoresizing Mask</code>。特别注意，用IB做和用代码做是不同的，代码中没有支柱的概念，比如设置固定上、左、右边距和自动宽度效果的话，用代码就得这么写：</p>
+        <p>今年12月看完了一本关于iOS自动布局的作品，叫<a target="_blank" rel="noopener external nofollow noreferrer" href="https://useyourloaf.com/autolayout/">Modern Auto Layout</a>，作者是<code>Keith Harrison</code>，知名博客<a target="_blank" rel="noopener external nofollow noreferrer" href="https://useyourloaf.com/">Use Your Loaf</a>的作者，一位元老级程序员。这本书里介绍了iOS自动布局的概念、发展、技术细节、API更新和使用场景，即使懂iOS但是自动布局方面零基础的开发者，只要坚持看完并且完成每章的课后练习，也能做到布局菜鸟变大师。这篇博客就简单做个总结性的笔记，提炼一些重点和自我理解。</p>
+<h2 id="弹簧与支柱"><a href="#弹簧与支柱" class="headerlink" title="弹簧与支柱"></a>弹簧与支柱</h2><p>在自动布局出现以前，我们都是通过设置view.frame来做到布局的，但是随着iPhone和iPad的迭代升级，出现不同大大小小的屏幕，导致手动布局的代码变得难以维护。为了做到视图自适应的效果，苹果最开始给出了弹簧与支柱<code>(springs and struts)</code>的解决方案，你可以在Interface Builder里看到这样的截图：<br><img src="/archives/98e4e333/springs_and_struts.JPG" alt="strings and struts"><br>它的意思就是：通过设置视图外在的上下左右四个<code>支柱</code>来固定与父视图的间距，以及设置内部的宽高<code>弹簧</code>来决定是否自适应宽高。这样的话，视图就会跟随父视图frame的变化而变化。换成代码的话，就叫做<code>Autoresizing Mask</code>。特别注意，用IB做和用代码做是不同的，代码中没有支柱的概念，比如设置固定上、左、右边距和自动宽度效果的话，用代码就得这么写：</p>
 <pre><code>greenView.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]</code></pre>
 <p>弹簧与支柱的方法，解决了父子视图之间自适应的问题，但是却无法解决兄弟视图的自适应。比如视图A有两个子视图B和C，可以用弹簧与支柱来确定A与B、A与C的自适应关系，但是B和C如果想要保持一个固定的间距，这种问题就超越了弹簧与支柱的能力，但是可以用自动布局实现。</p>
-<h2 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h2><p>自动布局的核心是约束<code>(NSLayoutConstraint)</code>，约束是指定视图之间的关系和规则，然后在运行时再将规则转换成视图的frame。而约束的本质其实是数学公式，比如指定两个视图之间的距离，其实就是创建一个约束公式：<br><img src="/archives/98e4e333/98e4e333/constraint_equation.PNG" alt="constraint equation"><br>约束可以设置的关系有很多，比如这些例子：</p>
+<h2 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h2><p>自动布局的核心是约束<code>(NSLayoutConstraint)</code>，约束是指定视图之间的关系和规则，然后在运行时再将规则转换成视图的frame。而约束的本质其实是数学公式，比如指定两个视图之间的距离，其实就是创建一个约束公式：<br><img src="/archives/98e4e333/constraint_equation.JPG" alt="constraint equation"><br>约束可以设置的关系有很多，比如这些例子：</p>
 <pre><code>// 垂直方向间距
 redView.top == greenView.bottom + 8.0
 // 宽高倍数
@@ -175,10 +175,10 @@ redView.height = 50.0</code></pre>
 <li>添加与父视图之间的top, left约束（确定了view的position）；还需要添加width, height约束（确定了view的size）。</li>
 <li>添加与父视图之间的top, left约束（确定了view的position）；继续添加与父视图的bottom, right约束（这样相当于间接确定了view的size）。</li>
 </ul>
-<p>有时候简单执行上面的方法也是不够的，比如下面这个例子，按照截图中的规则添加约束。<br><img src="/archives/98e4e333/98e4e333/sibling_views_1.PNG" alt="sibling views 1"><br>当黄色视图水平拉伸的时候，依然无法确定红色和绿色两个视图的宽度该怎么分配，这就造成了歧义(ambiguity)。<br><img src="/archives/98e4e333/98e4e333/sibling_views_2.PNG" alt="sibling views 2"><br>如果再为它们添加一个等宽的约束，才能最终确定子视图的size，这才算是足够。</p>
-<h4 id="约束被谁拥有呢？"><a href="#约束被谁拥有呢？" class="headerlink" title="约束被谁拥有呢？"></a>约束被谁拥有呢？</h4><p>约束创建出来，总需要有个地方保存（被持有）吧。UIView有个只读属性<code>constraints</code>，即拥有的约束集合，说明约束是被UIView对象所持有的。问题是，每一个创建出来的约束，究竟该分配给哪个视图呢。官方定义是，<strong>视图拥有的约束只能包含该视图本身或其子视图。</strong>举个例子就清楚了，比如有红绿黄三个视图，yellowView是另外两个的父视图，两个子视图有自己的宽高约束，greenView居中对齐，redView为水平居中且垂直距离greenView16个单位。<br><img src="/archives/98e4e333/98e4e333/constraint_owner_1.PNG" alt="constraint owner 1"><br>这个例子中，每个view的constraints究竟包含哪些约束呢？拿greenView来说，宽高约束都设给自己的，跟其他view没有关系，所以自己拥有它们；中心约束是相对父视图的，对于涉及了父视图的约束根据定义就只能由作为父视图的yellowView拥有；垂直方向16单位的约束所涉及同级的视图，谁拥有都不合适，所以依然是父视图yellowView拥有。<br><img src="/archives/98e4e333/98e4e333/constraint_owner_2.PNG" alt="constraint owner 2"></p>
+<p>有时候简单执行上面的方法也是不够的，比如下面这个例子，按照截图中的规则添加约束。<br><img src="/archives/98e4e333/sibling_views_1.JPG" alt="sibling views 1"><br>当黄色视图水平拉伸的时候，依然无法确定红色和绿色两个视图的宽度该怎么分配，这就造成了歧义(ambiguity)。<br><img src="/archives/98e4e333/sibling_views_2.JPG" alt="sibling views 2"><br>如果再为它们添加一个等宽的约束，才能最终确定子视图的size，这才算是足够。</p>
+<h4 id="约束被谁拥有呢？"><a href="#约束被谁拥有呢？" class="headerlink" title="约束被谁拥有呢？"></a>约束被谁拥有呢？</h4><p>约束创建出来，总需要有个地方保存（被持有）吧。UIView有个只读属性<code>constraints</code>，即拥有的约束集合，说明约束是被UIView对象所持有的。问题是，每一个创建出来的约束，究竟该分配给哪个视图呢。官方定义是，<strong>视图拥有的约束只能包含该视图本身或其子视图。</strong>举个例子就清楚了，比如有红绿黄三个视图，yellowView是另外两个的父视图，两个子视图有自己的宽高约束，greenView居中对齐，redView为水平居中且垂直距离greenView16个单位。<br><img src="/archives/98e4e333/constraint_owner_1.JPG" alt="constraint owner 1"><br>这个例子中，每个view的constraints究竟包含哪些约束呢？拿greenView来说，宽高约束都设给自己的，跟其他view没有关系，所以自己拥有它们；中心约束是相对父视图的，对于涉及了父视图的约束根据定义就只能由作为父视图的yellowView拥有；垂直方向16单位的约束所涉及同级的视图，谁拥有都不合适，所以依然是父视图yellowView拥有。<br><img src="/archives/98e4e333/constraint_owner_2.JPG" alt="constraint owner 2"></p>
 <h2 id="Layout-Guide"><a href="#Layout-Guide" class="headerlink" title="Layout Guide"></a>Layout Guide</h2><p>自iOS9以后，苹果推出了<code>UILayoutGuide</code>，我把它简单理解为一个既看不见也不能响应事件交互的矩形框。它不是视图，也不会存在于视图层级中，而它可以参与自动布局中约束关系的创建，在布局中起到<code>占位视图</code>的作用。比如某些时候，你可能为了完成一些复杂的布局，需要创建几个不带背景色的UIView仅仅是为了放在那里填充位置，实现等宽等距或视图居中的效果，现在这些工作也可以交给layout guide来完成，因为正好符合它的特点（看不见且无视点击的矩形框）。</p>
-<h4 id="Safe-Area"><a href="#Safe-Area" class="headerlink" title="Safe Area"></a>Safe Area</h4><p>但是layout guide只是用在这里就有些小题大做了，苹果在iOS11推出了<code>Safe Area</code>的概念，也就是视图安全区域，它的作用就是让视图不会被状态栏、导航栏、tab栏和刘海头给遮挡，可以通过UIView的<code>safeAreaLayoutGuide</code>属性获取。以下是Safe Area的示意图<br><img src="/archives/98e4e333/98e4e333/safe_area.PNG" alt="safe area"><br>为了兼容低版本的iOS，可以在代码中可以用<code>topLayoutGuide</code>和<code>bottomLayoutGuide</code>来适配类似的效果（后来推出了安全区域后就被苹果废弃了），但如果你使用IB来创建约束，即使使用了Safe Layout Guide，系统也会帮你自动兼容到iOS9的。</p>
+<h4 id="Safe-Area"><a href="#Safe-Area" class="headerlink" title="Safe Area"></a>Safe Area</h4><p>但是layout guide只是用在这里就有些小题大做了，苹果在iOS11推出了<code>Safe Area</code>的概念，也就是视图安全区域，它的作用就是让视图不会被状态栏、导航栏、tab栏和刘海头给遮挡，可以通过UIView的<code>safeAreaLayoutGuide</code>属性获取。以下是Safe Area的示意图<br><img src="/archives/98e4e333/safe_area.JPG" alt="safe area"><br>为了兼容低版本的iOS，可以在代码中可以用<code>topLayoutGuide</code>和<code>bottomLayoutGuide</code>来适配类似的效果（后来推出了安全区域后就被苹果废弃了），但如果你使用IB来创建约束，即使使用了Safe Layout Guide，系统也会帮你自动兼容到iOS9的。</p>
 <h4 id="Margins"><a href="#Margins" class="headerlink" title="Margins"></a>Margins</h4><p>如果在父子视图布局中需要额外边距(Margins)的话，可以使用UIView的<code>layoutMarginsGuide</code>来布局。边距大小也是可以通过UIView的<code>layoutMargins</code>来修改的，这些margins直到视图显示在屏幕上时才会被最终确定(viewDidAppear)。在iOS11，苹果还支持了<code>directionalLayoutMargins</code>来满足right-to-left语言的适配。</p>
 <p>需要注意的是，对于iOS11以下的版本，开发者不能更改根视图的margins，意思是如果你尝试修改viewController.view.layoutMargins的话是无效的。而且margin guide会忽视掉top/bottomLayoutGuide，这样就导致基于margin guide的视图有可能被导航栏给遮住。</p>
 <p>从个人的开发经历来说，我从来没有使用过它，一直是简单粗暴地创建间距约束在做需求，毕竟个人觉得设置约束的constant更加直观一些。</p>
@@ -209,8 +209,8 @@ redView.height = 50.0</code></pre>
         return CGSize(width: UIViewNoIntrinsicMetric, height: 100) 
     }
 }</code></pre>
-<h4 id="拒绝拉伸和压缩"><a href="#拒绝拉伸和压缩" class="headerlink" title="拒绝拉伸和压缩"></a>拒绝拉伸和压缩</h4><p>比如这个截图，有图片和文本，它们的size都是根据内容来自适应的，所以不需要人为设置宽度约束。但是问题在于，当屏幕变宽时，谁可以优先被拉伸？当屏幕变窄时，谁又可以优先被压缩呢？<br><img src="/archives/98e4e333/98e4e333/priority_1.PNG" alt="priority 1"><br>解决这个问题，需要引进两个概念：拒绝拉伸优先级<code>Content-Hugging priority</code>和拒绝压缩优先级<code>Compression-Resistance priority</code>，这样就好理解了。再看上面的例子，将图片的两个拒绝值都提高1个单位，当屏幕变宽时，由于图片相对于文本更加拒绝被拉伸，所以文本宽度就被拉伸开了；当屏幕变窄时，由于图片相对于文本更加拒绝被压缩，所以文本的宽度就被挤压而导致换行。<br><img src="/archives/98e4e333/98e4e333/priority_2.PNG" alt="priority 2"></p>
-<h2 id="UIKit组合技"><a href="#UIKit组合技" class="headerlink" title="UIKit组合技"></a>UIKit组合技</h2><h4 id="UIStackView"><a href="#UIStackView" class="headerlink" title="UIStackView"></a>UIStackView</h4><p>苹果推出的<code>UIStackView</code>非常方便的满足了弹性布局(Flexbox)的需求，使用stack的方式布局，既减少了约束维护成本，而且它的强大之处在于通过嵌套布局完成复杂的UI，比如下面这个截图，只用UIStackView来布局完全足够了：<br><img src="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/Art/Nested_Stack_Views_Screenshot_2x.png" alt="UIStackView"></p>
+<h4 id="拒绝拉伸和压缩"><a href="#拒绝拉伸和压缩" class="headerlink" title="拒绝拉伸和压缩"></a>拒绝拉伸和压缩</h4><p>比如这个截图，有图片和文本，它们的size都是根据内容来自适应的，所以不需要人为设置宽度约束。但是问题在于，当屏幕变宽时，谁可以优先被拉伸？当屏幕变窄时，谁又可以优先被压缩呢？<br><img src="/archives/98e4e333/priority_1.JPG" alt="priority 1"><br>解决这个问题，需要引进两个概念：拒绝拉伸优先级<code>Content-Hugging priority</code>和拒绝压缩优先级<code>Compression-Resistance priority</code>，这样就好理解了。再看上面的例子，将图片的两个拒绝值都提高1个单位，当屏幕变宽时，由于图片相对于文本更加拒绝被拉伸，所以文本宽度就被拉伸开了；当屏幕变窄时，由于图片相对于文本更加拒绝被压缩，所以文本的宽度就被挤压而导致换行。<br><img src="/archives/98e4e333/priority_2.JPG" alt="priority 2"></p>
+<h2 id="UIKit组合技"><a href="#UIKit组合技" class="headerlink" title="UIKit组合技"></a>UIKit组合技</h2><h4 id="UIStackView"><a href="#UIStackView" class="headerlink" title="UIStackView"></a>UIStackView</h4><p>苹果推出的<code>UIStackView</code>非常方便的满足了弹性布局(Flexbox)的需求，使用stack的方式布局，既减少了约束维护成本，而且它的强大之处在于通过嵌套布局完成复杂的UI，比如下面这个截图，只用UIStackView来布局完全足够了：<br><img src="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/Art/Nested_Stack_Views_Screenshot_2x.JPG" alt="UIStackView"></p>
 <p>对于UIStackView，我总结了几个基本点：</p>
 <ul>
 <li>首先需要指明<code>axis</code>，即stack方向是水平布局还是垂直布局</li>
@@ -290,19 +290,19 @@ redView.height = 50.0</code></pre>
     <strong>作者:  </strong>kunkunboy</a>
     </li>
     <li class="post-copyright-link">
-    <strong>文章链接:  </strong>
+    <strong>文章连结:  </strong>
     <a href="/archives/98e4e333.html" target="_blank" title="现代自动布局">https://www.kunkunboy.com/archives/98e4e333.html</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
-      本博客所有文章除特别声明外，均采用<a rel="license external nofollow noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-      许可协议。转载请注明出处！
+      本网志所有文章除特别声明外,均采用 <a rel="license external nofollow noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
     </li>
   </ul>
 <div>
     
     <footer class="article-footer">
-      <a data-url="https://www.kunkunboy.com/archives/98e4e333.html" data-id="ckj77mio400058se0aybh1ov4" class="article-share-link">Share</a>
+      <a data-url="https://www.kunkunboy.com/archives/98e4e333.html" data-id="ckjcyorah0005ite09y7b5kzu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/auto-layout/" rel="tag">auto layout</a></li></ul>
