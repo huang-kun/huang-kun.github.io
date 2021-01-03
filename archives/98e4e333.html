@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="<meta name="baidu-site-verification" content="code-H4dQLLFwFd" />">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -17,35 +18,35 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.kunkunboy.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.huangkun1987.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="今年12月看完了一本关于iOS自动布局的作品，叫Modern Auto Layout，作者是Keith Harrison，知名博客Use Your Loaf的作者，一位元老级程序员。这本书里介绍了iOS自动布局的概念、发展、技术细节、API更新和使用场景，即使懂iOS但是自动布局方面零基础的开发者，只要坚持看完并且完成每章的课后练习，也能做到布局菜鸟变大师。这篇博客就简单做个总结性的笔记，提炼一些">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS现代自动布局">
-<meta property="og:url" content="https://www.kunkunboy.com/archives/98e4e333.html">
-<meta property="og:site_name" content="kunkunboy">
+<meta property="og:url" content="https://www.huangkun1987.com/archives/98e4e333.html">
+<meta property="og:site_name" content="huangkun1987">
 <meta property="og:description" content="今年12月看完了一本关于iOS自动布局的作品，叫Modern Auto Layout，作者是Keith Harrison，知名博客Use Your Loaf的作者，一位元老级程序员。这本书里介绍了iOS自动布局的概念、发展、技术细节、API更新和使用场景，即使懂iOS但是自动布局方面零基础的开发者，只要坚持看完并且完成每章的课后练习，也能做到布局菜鸟变大师。这篇博客就简单做个总结性的笔记，提炼一些">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/springs_and_struts.JPG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/constraint_equation.JPG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/sibling_views_1.JPG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/sibling_views_2.JPG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/constraint_owner_1.JPG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/constraint_owner_2.JPG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/safe_area.JPG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/priority_1.JPG">
-<meta property="og:image" content="https://www.kunkunboy.com/archives/98e4e333/priority_2.JPG">
-<meta property="og:image" content="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/Art/Nested_Stack_Views_Screenshot_2x.png">
+<meta property="og:image" content="https://www.huangkun1987.com/archives/98e4e333/springs_and_struts.png">
+<meta property="og:image" content="https://www.huangkun1987.com/archives/98e4e333/constraint_equation.png">
+<meta property="og:image" content="https://www.huangkun1987.com/archives/98e4e333/sibling_views_1.png">
+<meta property="og:image" content="https://www.huangkun1987.com/archives/98e4e333/sibling_views_2.png">
+<meta property="og:image" content="https://www.huangkun1987.com/archives/98e4e333/constraint_owner_1.png">
+<meta property="og:image" content="https://www.huangkun1987.com/archives/98e4e333/constraint_owner_2.png">
+<meta property="og:image" content="https://www.huangkun1987.com/archives/98e4e333/safe_area.png">
+<meta property="og:image" content="https://www.huangkun1987.com/archives/98e4e333/priority_1.png">
+<meta property="og:image" content="https://www.huangkun1987.com/archives/98e4e333/priority_2.png">
+<meta property="og:image" content="https://www.huangkun1987.com/archives/98e4e333/Nested_Stack_Views.png">
 <meta property="article:published_time" content="2020-12-27T00:27:31.000Z">
-<meta property="article:modified_time" content="2021-01-02T10:21:26.456Z">
-<meta property="article:author" content="kunkunboy">
+<meta property="article:modified_time" content="2021-01-03T01:27:01.448Z">
+<meta property="article:author" content="huangkun1987">
 <meta property="article:tag" content="Auto Layout">
 <meta property="article:tag" content="iOS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.kunkunboy.com/archives/98e4e333/springs_and_struts.JPG">
+<meta name="twitter:image" content="https://www.huangkun1987.com/archives/98e4e333/springs_and_struts.png">
 
-<link rel="canonical" href="https://www.kunkunboy.com/archives/98e4e333.html">
+<link rel="canonical" href="https://www.huangkun1987.com/archives/98e4e333.html">
 
 
 <script id="page-configurations">
@@ -58,24 +59,15 @@
   };
 </script>
 
-  <title>iOS现代自动布局 | kunkunboy</title>
+  <title>iOS现代自动布局 | huangkun1987</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWN2XBP76D"></script>
-    <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-PWN2XBP76D');
-      }
-    </script>
 
 
   <script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?547b5983788aec3fe6d8dcfbab9df299";
+      hm.src = "https://hm.baidu.com/hm.js?6d82bb8cf854d61a6cf3ec75ad82bfcf";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -109,10 +101,9 @@
 
 
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="kunkunboy" type="application/atom+xml">
-<link rel="alternate" href="/rss2.xml" title="kunkunboy" type="application/rss+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="alternate" href="/atom.xml" title="huangkun1987" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="huangkun1987" type="application/rss+xml">
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -132,7 +123,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">kunkunboy</h1>
+      <h1 class="site-title">huangkun1987</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">Love Blog Again</p>
@@ -187,16 +178,16 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
-    <link itemprop="mainEntityOfPage" href="https://www.kunkunboy.com/archives/98e4e333.html">
+    <link itemprop="mainEntityOfPage" href="https://www.huangkun1987.com/archives/98e4e333.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="kunkunboy">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="huangkun1987">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kunkunboy">
+      <meta itemprop="name" content="huangkun1987">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -217,7 +208,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-02 18:21:26" itemprop="dateModified" datetime="2021-01-02T18:21:26+08:00">2021-01-02</time>
+                <time title="Modified: 2021-01-03 09:27:01" itemprop="dateModified" datetime="2021-01-03T09:27:01+08:00">2021-01-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -230,6 +221,13 @@
             </span>
 
           
+            <span id="/archives/98e4e333.html" class="post-meta-item leancloud_visitors" data-flag-title="iOS现代自动布局" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
   
   <span class="post-meta-item">
     
@@ -255,20 +253,11 @@
 
       
         <p>今年12月看完了一本关于iOS自动布局的作品，叫<a target="_blank" rel="noopener external nofollow noreferrer" href="https://useyourloaf.com/autolayout/">Modern Auto Layout</a>，作者是<code>Keith Harrison</code>，知名博客<a target="_blank" rel="noopener external nofollow noreferrer" href="https://useyourloaf.com/">Use Your Loaf</a>的作者，一位元老级程序员。这本书里介绍了iOS自动布局的概念、发展、技术细节、API更新和使用场景，即使懂iOS但是自动布局方面零基础的开发者，只要坚持看完并且完成每章的课后练习，也能做到布局菜鸟变大师。这篇博客就简单做个总结性的笔记，提炼一些重点和自我理解。</p>
-<h2 id="弹簧与支柱"><a href="#弹簧与支柱" class="headerlink" title="弹簧与支柱"></a>弹簧与支柱</h2><p>在自动布局出现以前，我们都是通过设置view.frame来做到布局的，但是随着iPhone和iPad的迭代升级，出现不同大大小小的屏幕，导致手动布局的代码变得难以维护。为了做到视图自适应的效果，苹果最开始给出了弹簧与支柱<code>(springs and struts)</code>的解决方案，你可以在Interface Builder里看到这样的截图：<br><img src="/images/fancybox_loading.gif" data-original="/archives/98e4e333/springs_and_struts.JPG" alt="strings and struts"><br>它的意思就是：通过设置视图外在的上下左右四个<code>支柱</code>来固定与父视图的间距，以及设置内部的宽高<code>弹簧</code>来决定是否自适应宽高。这样的话，视图就会跟随父视图frame的变化而变化。换成代码的话，就叫做<code>Autoresizing Mask</code>。特别注意，用IB做和用代码做是不同的，代码中没有支柱的概念，比如设置固定上、左、右边距和自动宽度效果的话，用代码就得这么写：</p>
-<pre><code>greenView.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]</code></pre>
+<h2 id="弹簧与支柱"><a href="#弹簧与支柱" class="headerlink" title="弹簧与支柱"></a>弹簧与支柱</h2><p>在自动布局出现以前，我们都是通过设置view.frame来做到布局的，但是随着iPhone和iPad的迭代升级，出现不同大大小小的屏幕，导致手动布局的代码变得难以维护。为了做到视图自适应的效果，苹果最开始给出了弹簧与支柱<code>(springs and struts)</code>的解决方案，你可以在Interface Builder里看到这样的截图：<br><img src="/images/loader.gif" data-original="/archives/98e4e333/springs_and_struts.png" alt="strings and struts"><br>它的意思就是：通过设置视图外在的上下左右四个<code>支柱</code>来固定与父视图的间距，以及设置内部的宽高<code>弹簧</code>来决定是否自适应宽高。这样的话，视图就会跟随父视图frame的变化而变化。换成代码的话，就叫做<code>Autoresizing Mask</code>。特别注意，用IB做和用代码做是不同的，代码中没有支柱的概念，比如设置固定上、左、右边距和自动宽度效果的话，用代码就得这么写：</p>
+<figure class="highlight swift"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greenView.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]</span><br></pre></td></tr></tbody></table></figure>
 <p>弹簧与支柱的方法，解决了父子视图之间自适应的问题，但是却无法解决兄弟视图的自适应。比如视图A有两个子视图B和C，可以用弹簧与支柱来确定A与B、A与C的自适应关系，但是B和C如果想要保持一个固定的间距，这种问题就超越了弹簧与支柱的能力，但是可以用自动布局实现。</p>
-<h2 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h2><p>自动布局的核心是约束<code>(NSLayoutConstraint)</code>，约束是指定视图之间的关系和规则，然后在运行时再将规则转换成视图的frame。而约束的本质其实是数学公式，比如指定两个视图之间的距离，其实就是创建一个约束公式：<br><img src="/images/fancybox_loading.gif" data-original="/archives/98e4e333/constraint_equation.JPG" alt="constraint equation"><br>约束可以设置的关系有很多，比如这些例子：</p>
-<pre><code>// 垂直方向间距
-redView.top == greenView.bottom + 8.0
-// 宽高倍数
-redView.height == 0.5 x greenView.height
-// 不等关系
-redView.width &lt;= greenView.width
-// 长宽比
-greenView.height = 0.5 x greenView.width
-// 宽高常数
-redView.height = 50.0</code></pre>
+<h2 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h2><p>自动布局的核心是约束<code>(NSLayoutConstraint)</code>，约束是指定视图之间的关系和规则，然后在运行时再将规则转换成视图的frame。而约束的本质其实是数学公式，比如指定两个视图之间的距离，其实就是创建一个约束公式：<br><img src="/images/loader.gif" data-original="/archives/98e4e333/constraint_equation.png" alt="constraint equation"><br>约束可以设置的关系有很多，比如这些例子：</p>
+<figure class="highlight swift"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 垂直方向间距</span></span><br><span class="line">redView.top == greenView.bottom + <span class="number">8.0</span></span><br><span class="line"><span class="comment">// 宽高倍数</span></span><br><span class="line">redView.height == <span class="number">0.5</span> x greenView.height</span><br><span class="line"><span class="comment">// 不等关系</span></span><br><span class="line">redView.width &lt;= greenView.width</span><br><span class="line"><span class="comment">// 长宽比</span></span><br><span class="line">greenView.height = <span class="number">0.5</span> x greenView.width</span><br><span class="line"><span class="comment">// 宽高常数</span></span><br><span class="line">redView.height = <span class="number">50.0</span></span><br></pre></td></tr></tbody></table></figure>
 <p>使用代码创建的话，苹果官方给了三种方式：</p>
 <ul>
 <li>使用NSLayoutConstraint类相关的API（公式版API，使用很麻烦，如果你只是写业务而不是写framework，就别用了）</li>
@@ -282,10 +271,10 @@ redView.height = 50.0</code></pre>
 <li>添加与父视图之间的top, left约束（确定了view的position）；还需要添加width, height约束（确定了view的size）。</li>
 <li>添加与父视图之间的top, left约束（确定了view的position）；继续添加与父视图的bottom, right约束（这样相当于间接确定了view的size）。</li>
 </ul>
-<p>有时候简单执行上面的方法也是不够的，比如下面这个例子，按照截图中的规则添加约束。<br><img src="/images/fancybox_loading.gif" data-original="/archives/98e4e333/sibling_views_1.JPG" alt="sibling views 1"><br>当黄色视图水平拉伸的时候，依然无法确定红色和绿色两个视图的宽度该怎么分配，这就造成了歧义(ambiguity)。<br><img src="/images/fancybox_loading.gif" data-original="/archives/98e4e333/sibling_views_2.JPG" alt="sibling views 2"><br>如果再为它们添加一个等宽的约束，才能最终确定子视图的size，这才算是足够。</p>
-<h3 id="约束被谁拥有呢？"><a href="#约束被谁拥有呢？" class="headerlink" title="约束被谁拥有呢？"></a>约束被谁拥有呢？</h3><p>约束创建出来，总需要有个地方保存（被持有）吧。UIView有个只读属性<code>constraints</code>，即拥有的约束集合，说明约束是被UIView对象所持有的。问题是，每一个创建出来的约束，究竟该分配给哪个视图呢。官方定义是，<strong>视图拥有的约束只能包含该视图本身或其子视图。</strong>举个例子就清楚了，比如有红绿黄三个视图，yellowView是另外两个的父视图，两个子视图有自己的宽高约束，greenView居中对齐，redView为水平居中且垂直距离greenView16个单位。<br><img src="/images/fancybox_loading.gif" data-original="/archives/98e4e333/constraint_owner_1.JPG" alt="constraint owner 1"><br>这个例子中，每个view的constraints究竟包含哪些约束呢？拿greenView来说，宽高约束都设给自己的，跟其他view没有关系，所以自己拥有它们；中心约束是相对父视图的，对于涉及了父视图的约束根据定义就只能由作为父视图的yellowView拥有；垂直方向16单位的约束所涉及同级的视图，谁拥有都不合适，所以依然是父视图yellowView拥有。<br><img src="/images/fancybox_loading.gif" data-original="/archives/98e4e333/constraint_owner_2.JPG" alt="constraint owner 2"></p>
+<p>有时候简单执行上面的方法也是不够的，比如下面这个例子，按照截图中的规则添加约束。<br><img src="/images/loader.gif" data-original="/archives/98e4e333/sibling_views_1.png" alt="sibling views 1"><br>当黄色视图水平拉伸的时候，依然无法确定红色和绿色两个视图的宽度该怎么分配，这就造成了歧义(ambiguity)。<br><img src="/images/loader.gif" data-original="/archives/98e4e333/sibling_views_2.png" alt="sibling views 2"><br>如果再为它们添加一个等宽的约束，才能最终确定子视图的size，这才算是足够。</p>
+<h3 id="约束被谁拥有呢？"><a href="#约束被谁拥有呢？" class="headerlink" title="约束被谁拥有呢？"></a>约束被谁拥有呢？</h3><p>约束创建出来，总需要有个地方保存（被持有）吧。UIView有个只读属性<code>constraints</code>，即拥有的约束集合，说明约束是被UIView对象所持有的。问题是，每一个创建出来的约束，究竟该分配给哪个视图呢。官方定义是，<strong>视图拥有的约束只能包含该视图本身或其子视图。</strong>举个例子就清楚了，比如有红绿黄三个视图，yellowView是另外两个的父视图，两个子视图有自己的宽高约束，greenView居中对齐，redView为水平居中且垂直距离greenView16个单位。<br><img src="/images/loader.gif" data-original="/archives/98e4e333/constraint_owner_1.png" alt="constraint owner 1"><br>这个例子中，每个view的constraints究竟包含哪些约束呢？拿greenView来说，宽高约束都设给自己的，跟其他view没有关系，所以自己拥有它们；中心约束是相对父视图的，对于涉及了父视图的约束根据定义就只能由作为父视图的yellowView拥有；垂直方向16单位的约束所涉及同级的视图，谁拥有都不合适，所以依然是父视图yellowView拥有。<br><img src="/images/loader.gif" data-original="/archives/98e4e333/constraint_owner_2.png" alt="constraint owner 2"></p>
 <h2 id="Layout-Guide"><a href="#Layout-Guide" class="headerlink" title="Layout Guide"></a>Layout Guide</h2><p>自iOS9以后，苹果推出了<code>UILayoutGuide</code>，我把它简单理解为一个既看不见也不能响应事件交互的矩形框。它不是视图，也不会存在于视图层级中，而它可以参与自动布局中约束关系的创建，在布局中起到<code>占位视图</code>的作用。比如某些时候，你可能为了完成一些复杂的布局，需要创建几个不带背景色的UIView仅仅是为了放在那里填充位置，实现等宽等距或视图居中的效果，现在这些工作也可以交给layout guide来完成，因为正好符合它的特点（看不见且无视点击的矩形框）。</p>
-<h3 id="Safe-Area"><a href="#Safe-Area" class="headerlink" title="Safe Area"></a>Safe Area</h3><p>但是layout guide只是用在这里就有些小题大做了，苹果在iOS11推出了<code>Safe Area</code>的概念，也就是视图安全区域，它的作用就是让视图不会被状态栏、导航栏、tab栏和刘海头给遮挡，可以通过UIView的<code>safeAreaLayoutGuide</code>属性获取。以下是Safe Area的示意图<br><img src="/images/fancybox_loading.gif" data-original="/archives/98e4e333/safe_area.JPG" alt="safe area"><br>为了兼容低版本的iOS，可以在代码中可以用<code>topLayoutGuide</code>和<code>bottomLayoutGuide</code>来适配类似的效果（后来推出了安全区域后就被苹果废弃了），但如果你使用IB来创建约束，即使使用了Safe Layout Guide，系统也会帮你自动兼容到iOS9的。</p>
+<h3 id="Safe-Area"><a href="#Safe-Area" class="headerlink" title="Safe Area"></a>Safe Area</h3><p>但是layout guide只是用在这里就有些小题大做了，苹果在iOS11推出了<code>Safe Area</code>的概念，也就是视图安全区域，它的作用就是让视图不会被状态栏、导航栏、tab栏和刘海头给遮挡，可以通过UIView的<code>safeAreaLayoutGuide</code>属性获取。以下是Safe Area的示意图<br><img src="/images/loader.gif" data-original="/archives/98e4e333/safe_area.png" alt="safe area"><br>为了兼容低版本的iOS，可以在代码中可以用<code>topLayoutGuide</code>和<code>bottomLayoutGuide</code>来适配类似的效果（后来推出了安全区域后就被苹果废弃了），但如果你使用IB来创建约束，即使使用了Safe Layout Guide，系统也会帮你自动兼容到iOS9的。</p>
 <h3 id="Margins"><a href="#Margins" class="headerlink" title="Margins"></a>Margins</h3><p>如果在父子视图布局中需要额外边距(Margins)的话，可以使用UIView的<code>layoutMarginsGuide</code>来布局。边距大小也是可以通过UIView的<code>layoutMargins</code>来修改的，这些margins直到视图显示在屏幕上时才会被最终确定(viewDidAppear)。在iOS11，苹果还支持了<code>directionalLayoutMargins</code>来满足right-to-left语言的适配。</p>
 <p>需要注意的是，对于iOS11以下的版本，开发者不能更改根视图的margins，意思是如果你尝试修改viewController.view.layoutMargins的话是无效的。而且margin guide会忽视掉top/bottomLayoutGuide，这样就导致基于margin guide的视图有可能被导航栏给遮住。</p>
 <p>从个人的开发经历来说，我从来没有使用过它，一直是简单粗暴地创建间距约束在做需求，毕竟个人觉得设置约束的constant更加直观一些。</p>
@@ -310,14 +299,10 @@ redView.height = 50.0</code></pre>
 <li>UITextView在开启了scrollEnabled的情况下，没有内容宽高，而在滑动行为禁止的情况下就表现得像多行文本的UILabel一样，不过大多数情况下，还是建议主动为它添加宽高约束吧。</li>
 </ul>
 <p>对于自定义的UIView，如果希望使用内容自适应的特性，也同样可以重载这个方法来实现：</p>
-<pre><code>class CustomView: UIView {
-    override var intrinsicContentSize: CGSize {
-        // 宽度无法自己决定，但是高度默认是100
-        return CGSize(width: UIViewNoIntrinsicMetric, height: 100) 
-    }
-}</code></pre>
-<h3 id="拒绝拉伸和压缩"><a href="#拒绝拉伸和压缩" class="headerlink" title="拒绝拉伸和压缩"></a>拒绝拉伸和压缩</h3><p>比如这个截图，有图片和文本，它们的size都是根据内容来自适应的，所以不需要人为设置宽度约束。但是问题在于，当屏幕变宽时，谁可以优先被拉伸？当屏幕变窄时，谁又可以优先被压缩呢？<br><img src="/images/fancybox_loading.gif" data-original="/archives/98e4e333/priority_1.JPG" alt="priority 1"><br>解决这个问题，需要引进两个概念：拒绝拉伸优先级<code>Content-Hugging priority</code>和拒绝压缩优先级<code>Compression-Resistance priority</code>，这样就好理解了。再看上面的例子，将图片的两个拒绝值都提高1个单位，当屏幕变宽时，由于图片相对于文本更加拒绝被拉伸，所以文本宽度就被拉伸开了；当屏幕变窄时，由于图片相对于文本更加拒绝被压缩，所以文本的宽度就被挤压而导致换行。<br><img src="/images/fancybox_loading.gif" data-original="/archives/98e4e333/priority_2.JPG" alt="priority 2"></p>
-<h2 id="UIKit组合技"><a href="#UIKit组合技" class="headerlink" title="UIKit组合技"></a>UIKit组合技</h2><h3 id="UIStackView"><a href="#UIStackView" class="headerlink" title="UIStackView"></a>UIStackView</h3><p>苹果推出的<code>UIStackView</code>非常方便的满足了弹性布局(Flexbox)的需求，使用stack的方式布局，既减少了约束维护成本，而且它的强大之处在于通过嵌套布局完成复杂的UI，比如下面这个截图，只用UIStackView来布局完全足够了：<br><img src="/images/fancybox_loading.gif" data-original="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/Art/Nested_Stack_Views_Screenshot_2x.png" alt="UIStackView"></p>
+<figure class="highlight swift"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomView</span>: <span class="title">UIView</span> </span>{</span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">var</span> intrinsicContentSize: <span class="type">CGSize</span> {</span><br><span class="line">        <span class="comment">// 宽度无法自己决定，但是高度默认是100</span></span><br><span class="line">        <span class="keyword">return</span> <span class="type">CGSize</span>(width: <span class="type">UIViewNoIntrinsicMetric</span>, height: <span class="number">100</span>) </span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="拒绝拉伸和压缩"><a href="#拒绝拉伸和压缩" class="headerlink" title="拒绝拉伸和压缩"></a>拒绝拉伸和压缩</h3><p>比如这个截图，有图片和文本，它们的size都是根据内容来自适应的，所以不需要人为设置宽度约束。但是问题在于，当屏幕变宽时，谁可以优先被拉伸？当屏幕变窄时，谁又可以优先被压缩呢？<br><img src="/images/loader.gif" data-original="/archives/98e4e333/priority_1.png" alt="priority 1"><br>解决这个问题，需要引进两个概念：拒绝拉伸优先级<code>Content-Hugging priority</code>和拒绝压缩优先级<code>Compression-Resistance priority</code>，这样就好理解了。再看上面的例子，将图片的两个拒绝值都提高1个单位，当屏幕变宽时，由于图片相对于文本更加拒绝被拉伸，所以文本宽度就被拉伸开了；当屏幕变窄时，由于图片相对于文本更加拒绝被压缩，所以文本的宽度就被挤压而导致换行。<br><img src="/images/loader.gif" data-original="/archives/98e4e333/priority_2.png" alt="priority 2"></p>
+<h2 id="UIKit组合技"><a href="#UIKit组合技" class="headerlink" title="UIKit组合技"></a>UIKit组合技</h2><h3 id="UIStackView"><a href="#UIStackView" class="headerlink" title="UIStackView"></a>UIStackView</h3><p>苹果推出的<code>UIStackView</code>非常方便的满足了弹性布局(Flexbox)的需求，使用stack的方式布局，既减少了约束维护成本，而且它的强大之处在于通过嵌套布局完成复杂的UI，比如下面这个截图，只用UIStackView来布局完全足够了：<br><img src="/images/loader.gif" data-original="/archives/98e4e333/Nested_Stack_Views.png" alt="UIStackView"></p>
 <p>对于UIStackView，我总结了几个基本点：</p>
 <ul>
 <li>首先需要指明<code>axis</code>，即stack方向是水平布局还是垂直布局</li>
@@ -350,7 +335,7 @@ redView.height = 50.0</code></pre>
 <h3 id="布局动画"><a href="#布局动画" class="headerlink" title="布局动画"></a>布局动画</h3><p>由于布局的更新不会立即生效，所以对于UIView动画而言，只有在动画的block里调用<code>layoutIfNeeded</code>方法，让布局立即生效，才能捕捉到视图的结束状态而顺利完成动画。该方法同样适用于iOS10推出的<code>UIViewPropertyAnimator</code>。</p>
 <h3 id="Alignment-Rect"><a href="#Alignment-Rect" class="headerlink" title="Alignment Rect"></a>Alignment Rect</h3><p>在布局时，引擎是根据视图的<code>Alignment Rect</code>来确定其位置的，而不是frame。为什么会这样呢？比如有些特殊情况，当视图存在阴影、右上角的红点数(Badge)，或者这个带阴影的图片等<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/kharrison/ALBookCode/tree/master/sample-code/engine/Alignment-v1/">demo示例</a>，而你希望在布局计算时考虑这些因素的话，就需要用到它了。UIView提供了<code>alignmentRectInsets</code>和<code>alignmentRect(forFrame:)</code>这些API以便修改。</p>
 <h2 id="调试技巧"><a href="#调试技巧" class="headerlink" title="调试技巧"></a>调试技巧</h2><h3 id="AutoresizingMask冲突"><a href="#AutoresizingMask冲突" class="headerlink" title="AutoresizingMask冲突"></a>AutoresizingMask冲突</h3><p>最常见的问题，就是在Xcode控制台看到<code>Unable to simultaneously satisfy constraints</code>，然后出现<code>NSAutoresizingMaskLayoutConstraint</code>之类的信息。这种情况原因就是，通过代码创建的UIView时，系统会自动把它默认的autoresizing mask转换成自动布局约束，结果就跟你为视图添加的约束冲突了。所以写布局代码时，一定别忘了加上这句：</p>
-<pre><code>view.translatesAutoresizingMaskIntoConstraints = false</code></pre>
+<figure class="highlight swift"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">view.translatesAutoresizingMaskIntoConstraints = <span class="literal">false</span></span><br></pre></td></tr></tbody></table></figure>
 <p>（好在<code>Masonry</code>和<code>SnapKit</code>这些开源库已经为我们做了这些琐事，真让人省心。）</p>
 <h3 id="标记"><a href="#标记" class="headerlink" title="标记"></a>标记</h3><p>还有一个技巧就是，给视图和约束添加标记。设置约束的<code>identifier</code>和设置视图的<code>accessibilityIdentifier</code>，就可以在约束日志里看到对应的是哪个视图和哪个约束了，很方便。</p>
 <h3 id="可视化工具"><a href="#可视化工具" class="headerlink" title="可视化工具"></a>可视化工具</h3><p>开发者可以通过调用<code>hasAmbiguousLayout</code>和<code>exerciseAmbiguityInLayout</code>方法检查视图是否存在约束不明确的bug，甚至可以在调试环境里调用<code>_autolayoutTrace</code>（私有API）来查看视图层级里是否存在Ambiguous Layout，但我基本上没有用过，因为读日志太累。相反，现在倒是有很多可视化工具可以在运行时检查视图层级的布局，相比代码检查方便多了，比如：</p>
@@ -363,14 +348,8 @@ redView.height = 50.0</code></pre>
 <h3 id="UIViewController如何加载自己的view"><a href="#UIViewController如何加载自己的view" class="headerlink" title="UIViewController如何加载自己的view"></a>UIViewController如何加载自己的view</h3><p>懒加载，通常是需要使用到view的时候，UIViewController会调用<code>loadView()</code>方法来加载UIView，loadView()方法会寻找是否存在nib或者storyboard文件并加载，如果没有就创建新的UIView对象。开发者不允许直接调用loadView()，如果需要强制加载view的话，可以调用<code>loadViewIfNeeded()</code>，而且可以通过<code>isViewLoaded</code>来判断view是否加载完成。</p>
 <h3 id="loadView是如何寻找nib文件的？"><a href="#loadView是如何寻找nib文件的？" class="headerlink" title="loadView是如何寻找nib文件的？"></a>loadView是如何寻找nib文件的？</h3><p>它首先根据vc的nibName属性来作为文件名称去寻找，如果没有给名称的话，就去找与vc相同类名的文件。比如vc的类叫RootViewController，那么loadView就会依次查找RootView.nib和RootViewController.nib，如果有<code>RootViewController~ipad.nib</code>和<code>RootViewController~iphone.nib</code>这样的文件，那么loadView也会根据不同设备加载对应的文件。</p>
 <h3 id="代码重载loadView"><a href="#代码重载loadView" class="headerlink" title="代码重载loadView"></a>代码重载loadView</h3><p>如果不用nib或者storyboard文件来加载view的话，也可以直接重载loadView方法。</p>
-<pre><code>class RootViewController: UIViewController { 
-    override func loadView() {
-        // 不要调super
-        let rootView = UIView()
-        rootView.backgroundColor = .yellow
-        view = rootView
-    }
-}</code></pre>
+<figure class="highlight swift"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RootViewController</span>: <span class="title">UIViewController</span> </span>{ </span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">loadView</span><span class="params">()</span></span> {</span><br><span class="line">        <span class="comment">// 不要调super</span></span><br><span class="line">        <span class="keyword">let</span> rootView = <span class="type">UIView</span>()</span><br><span class="line">        rootView.backgroundColor = .yellow</span><br><span class="line">        view = rootView</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
 <h3 id="手动布局可以在viewDidLoad里实现吗？"><a href="#手动布局可以在viewDidLoad里实现吗？" class="headerlink" title="手动布局可以在viewDidLoad里实现吗？"></a>手动布局可以在viewDidLoad里实现吗？</h3><p>严格来说的话，是不可以的。我们首先了解一下这些方法在vc的调用时机：</p>
 <ul>
 <li><code>loadView</code>：当需要使用view的时候，如果为nil，vc会调用loadView（懒）加载一个view</li>
@@ -397,11 +376,11 @@ redView.height = 50.0</code></pre>
 <div>
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>Post author:  </strong>kunkunboy
+    <strong>Post author:  </strong>huangkun1987
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="https://www.kunkunboy.com/archives/98e4e333.html" title="iOS现代自动布局">https://www.kunkunboy.com/archives/98e4e333.html</a>
+    <a href="https://www.huangkun1987.com/archives/98e4e333.html" title="iOS现代自动布局">https://www.huangkun1987.com/archives/98e4e333.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -491,7 +470,9 @@ redView.height = 50.0</code></pre>
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">kunkunboy</p>
+    <img class="site-author-image" itemprop="image" alt="huangkun1987"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">huangkun1987</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -614,7 +595,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       avatar     : 'mm',
       meta       : guest,
       pageSize   : '10' || 10,
-      visitor    : false,
+      visitor    : true,
       lang       : 'zh-cn' || 'zh-cn',
       path       : location.pathname,
       recordIP   : false,
